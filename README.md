@@ -1,5 +1,5 @@
 # MDIA1620
-A *cool* repository for my **MDIA 1620 code**
+>A *cool* repository for my **MDIA 1620 code**
 ---
 ## Aha moment:
 1. When code, the folder name should not include any spaces 
