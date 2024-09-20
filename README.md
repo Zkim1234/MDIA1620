@@ -11,7 +11,7 @@
 2. Terminals
 
 ## How I'm feeling:
-Excited to code :)
+Excited to code 
 
 ---
 **My Favourite Sandwich**
