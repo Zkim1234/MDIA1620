@@ -16,3 +16,19 @@ Excited to code
 ---
 **My Favourite Sandwich**
 ![Grilled Cheese](https://github.com/user-attachments/assets/c563a671-7e31-40b3-8f0c-b3854739068f)
+
+---
+## Week 3, Sept 20 2024
+
+## 3: Aha moment
+1. Connect git with my device
+2. Use of node
+3. Basic Javascript commands
+
+
+## 2: Still unclear about (want to learn more about)
+1. git commands in the terminal 
+2. visual studio shortcuts 
+
+## 1: How I'm feeling
+Confusing a bit, but want to get used to it. 
