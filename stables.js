@@ -39,6 +39,11 @@ console.log(2 + "2"); //result 22
 console.log(true + 2); //true is 1, 3
 console.log(false +2);//false is 0, 2
 
-console.log(`My horse ${horseName} and ya`);
+console.log(`My horse ${horseName}`);
 
-//'''''````````````
+//'''''`````````
+
+// Lesson 4 LAB 
+let horseNickname = "Gossip";
+console.log(`My horse name is ${horseName}. I call them with ${horseNickname} as a nickname.`);
+console.log("$"+((STABLE_MONTHLY_FEE*3)*.1)+" will be saved(10%) for 3 month stay at my stables.")
