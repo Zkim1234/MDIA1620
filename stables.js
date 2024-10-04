@@ -46,4 +46,4 @@ console.log(`My horse ${horseName}`);
 // Lesson 4 LAB 
 let horseNickname = "Gossip";
 console.log(`My horse name is ${horseName}. I call them with ${horseNickname} as a nickname.`);
-console.log("$"+((STABLE_MONTHLY_FEE*3)*.1)+" will be saved(10%) for 3 month stay at my stables.")
+console.log("$"+((STABLE_MONTHLY_FEE*3)*.1)+" will be saved(10%) for 3 month stay at my stables.");
