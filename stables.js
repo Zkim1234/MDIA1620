@@ -19,6 +19,7 @@ let isHorseInside = true;
 console.log(isHorseInside);
 
 //LESSON 4-CODE
+console.log("\n-----Lesson 4 -----");
 console.log(typeof 19); //number
 console.log(typeof true); //boolean
 console.log(typeof 1.6); //number
@@ -44,6 +45,48 @@ console.log(`My horse ${horseName}`);
 //'''''`````````
 
 // Lesson 4 LAB 
+console.log("\n-----Lesson 4 lab-----");
 let horseNickname = "Gossip";
 console.log(`My horse name is ${horseName}. I call them with ${horseNickname} as a nickname.`);
-console.log("$"+((STABLE_MONTHLY_FEE*3)*.1)+" will be saved(10%) for 3 month stay at my stables.");
+console.log("$"+((STABLE_MONTHLY_FEE*3)*.1)+" will be saved(10%) for 3 month stay at my stables."); 
+
+//Lesson 5 Lesson 
+console.log("\n-----Lesson 5-----");
+let goat = false;
+if(!goat){ // NOT false 
+    console.log(horseName); // slush
+} else {
+    console.log(horseNickname); // gossip
+}
+
+let grade = 4.6; // grading if statement
+if (grade <= 1.5){ // less or equal to 1.5
+    console.log("fail");
+} else if (grade <= 2.5){ 
+    console.log("below average");
+} else if (grade <= 3.5) { 
+    console.log("average");
+} else if (grade>4.5 || grade<0.5) { // greater than 4.5 OR less than 0.5
+    console.log("re-enter the grade");
+} else{
+    console.log("above average");
+}
+
+if (grade == 4.6){
+    console.log("hello");
+}
+if (grade === 4.6){
+    console.log("hello2");
+}
+if (grade !== 4.5){
+    console.log("bye");
+}
+
+//Lesson 5 LAB
+console.log("\n-----Lesson 5 lab-----");
+let myHorseLocate = "inside";
+if (myHorseLocate === "outside"){
+    console.log(horseName+" is outside");
+} else {
+    console.log(horseName + " is inside");
+}
