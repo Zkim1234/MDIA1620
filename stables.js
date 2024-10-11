@@ -60,33 +60,38 @@ if(!goat){ // NOT false
 }
 
 let grade = 4.6; // grading if statement
-if (grade <= 1.5){ // less or equal to 1.5
-    console.log("fail");
+if (grade>4.5 || grade<0.5){ // less or equal to 1.5
+    console.log("re-enter the grade");
 } else if (grade <= 2.5){ 
     console.log("below average");
 } else if (grade <= 3.5) { 
     console.log("average");
-} else if (grade>4.5 || grade<0.5) { // greater than 4.5 OR less than 0.5
-    console.log("re-enter the grade");
+} else if (grade <= 1.5) { // greater than 4.5 OR less than 0.5
+    console.log("fail");
 } else{
-    console.log("above average");
+    console.log("above average"); // greater than 
 }
 
-if (grade == 4.6){
-    console.log("hello");
-}
-if (grade === 4.6){
+let num = 1;
+if (num === 1){
     console.log("hello2");
 }
-if (grade !== 4.5){
+if (num !== 2){
     console.log("bye");
 }
 
 //Lesson 5 LAB
+
 console.log("\n-----Lesson 5 lab-----");
-let myHorseLocate = "inside";
-if (myHorseLocate === "outside"){
+
+//generate integer number 0 or 1 
+let randomNum = Math.floor(Math.random()*(2-0)+0); 
+// for integer random number: Math.floor(Math.random()*(max-min)+min)
+
+let myHorseLocate = randomNum; //0 is false, 1 is true
+console.log(randomNum);
+if (myHorseLocate <= 0){
     console.log(horseName+" is outside");
-} else {
+} else { //if its 1
     console.log(horseName + " is inside");
 }
