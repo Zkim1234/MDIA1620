@@ -81,10 +81,17 @@ if (num !== 2){
 }
 
 //Lesson 5 LAB
+
 console.log("\n-----Lesson 5 lab-----");
-let myHorseLocate = "inside";
-if (myHorseLocate === "outside"){
+
+//generate integer number 0 or 1 
+let randomNum = Math.floor(Math.random()*(2-0)+0); 
+// for integer random number: Math.floor(Math.random()*(max-min)+min)
+
+let myHorseLocate = randomNum; //0 is false, 1 is true
+console.log(randomNum);
+if (myHorseLocate <= 0){
     console.log(horseName+" is outside");
-} else {
+} else { //if its 1
     console.log(horseName + " is inside");
 }
