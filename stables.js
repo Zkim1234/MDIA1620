@@ -89,9 +89,41 @@ let randomNum = Math.floor(Math.random()*(2-0)+0);
 // for integer random number: Math.floor(Math.random()*(max-min)+min)
 
 let myHorseLocate = randomNum; //0 is false, 1 is true
-console.log(randomNum);
-if (myHorseLocate <= 0){
+//console.log(randomNum);
+
+if (myHorseLocate <= 0){//print if my horse is inside or outside
     console.log(horseName+" is outside");
 } else { //if its 1
     console.log(horseName + " is inside");
 }
+
+//Lesson 6 Indexes and Arrays
+console.log("-----Lesson 6-----")
+let word = "Carrot" 
+console.log(word.charAt(0)); //character at 0 
+
+//let methods = ["method1", "method2", "method3"];
+//console.log(methods.charAt(2)); // method3
+
+let listOfHorses = [horseName, "Boba", "Latte", "Earl Gray"];
+console.log(listOfHorses[2]);
+let horseAges = [horseAge, 2, 10, 12];
+
+console.log(listOfHorses.length); 
+
+console.log(`Hello, welcome, we have ${listOfHorses.length} horses`);
+
+
+//Lesson 6 LAB
+console.log("------Lesson 6 LAB------")
+
+let horseLocateArray = [" inside", " outside", " running outside", " chilling inside", ".. sorry I don't know what they are doing"]
+
+console.log(`Hello! I have ${listOfHorses.length} horses! Let me introduce my horses names! ${listOfHorses}`);
+listOfHorses.push("Milk Foam");
+console.log(`Oh! no wait I also have ${listOfHorses[4]}, I actually have ${listOfHorses.length} horses`);
+console.log(`${listOfHorses[0]} is${horseLocateArray[0]}` );
+console.log(`${listOfHorses[1]} is${horseLocateArray[1]}` );
+console.log(`${listOfHorses[2]} is${horseLocateArray[2]}` );
+console.log(`${listOfHorses[3]} is${horseLocateArray[3]}` );
+console.log(`${listOfHorses[4]} is${horseLocateArray[4]}` );
