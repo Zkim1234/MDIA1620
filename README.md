@@ -32,3 +32,10 @@ Excited to code
 
 ## 1: How I'm feeling
 Confusing a bit, but want to get used to it. 
+
+## Week 6 - Oct 11, 2024
+
+## 3 Things confusing about:
+1. Terminal git commands 
+2. Be organized with git website
+3. Removing items in the array 
