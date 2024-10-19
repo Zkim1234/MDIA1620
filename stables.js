@@ -127,3 +127,39 @@ console.log(`${listOfHorses[1]} is${horseLocateArray[1]}` );
 console.log(`${listOfHorses[2]} is${horseLocateArray[2]}` );
 console.log(`${listOfHorses[3]} is${horseLocateArray[3]}` );
 console.log(`${listOfHorses[4]} is${horseLocateArray[4]}` );
+
+
+//Lesson 7 Lesson
+console.log("------ Lesson 7 ------")
+
+horseAges.push(11,15,17);
+
+function logHorseAge(horse, age){
+    console.log(listOfHorses[horse] + " is " + horseAges[age]+ "!");
+}
+logHorseAge(4 , 6); 
+
+const rent = 2700;
+let amount; //global scope
+function payMe(rent, discount){
+    if(discount){
+         amount = rent - discount;
+    }
+    else{
+         amount = rent;
+    }
+    return amount;
+}
+console.log(`Your total rent is $${payMe(rent, 15)} after discount.`);
+
+//another real life example:
+
+function bankingData(userIsLoggedIn){
+    if(!userIsLoggedIn){
+        // all the banking data would go here
+    }
+    else{
+        // let them to log in
+    }
+    
+}
