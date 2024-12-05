@@ -1,165 +1,290 @@
-//name the horse in "" String
-let horseName = "gossip";
-console.log(horseName);
+//             .------.____
+//          .-'       \ ___)
+//       .-'         \\\
+//    .-'        ___  \\)
+// .-'          /  (\  |)
+//          __  \  ( | |
+//         /  \  \__'| |
+//        /    \____).-'
+//      .'       /   |
+//     /     .  /    |
+//   .'     / \/     |
+//  /      /   \     |
+//        /    /    _|_
+//        \   /    /\ /\
+//         \ /    /__v__\
+//          '    |       |
+//               |     .#|
+//               |#.  .##|
+//               |#######|
+//               |#######|
 
-//new name
-horseName = "Slush";
-console.log(horseName);
 
-//horse age, in 1234 integer
-let horseAge = 8;
-console.log(horseAge);
+// This is a template for the final project. You'll be setting up a stable and making
+// sure it runs smoothly.
+//
+// You can copy and paste this into your stables.js file, and then use it to guide you.
+// Please do not create a new file!
+// Feel free to keep the headings (e.g.: "Variables"), but please delete any boilerplate
+// comments. (Your own comments, where necessary, are acceptable.)
+//
+// NOTE: UNLESS SPECIFIED, VARIABLE NAMING IS UP TO YOU. THERE SHOULD BE NO HARD-CODED
+// NUMBERS OR STRINGS WHERE VARIBALES WOULD BE PREFERRED.
 
-//welcome message for horse
-let welcomeMessage = "Welcome to Slush's house"
-console.log("the horse name is " + welcomeMessage);
+//------------------------- Seting up shop -------------------------//
 
-//boolean, true or false
-let isHorseInside = true;
-console.log(isHorseInside);
+// Initialize a variable called "horses" that will store the horses in your stable.
+// Create a variable and use it to store a message visitors to the stable.
+// Create a variable and use it to store the cost of a late payment fee.
+// Create a variable and use it to store the number of available stalls in the stable.
 
-//LESSON 4-CODE
-console.log("\n-----Lesson 4 -----");
-console.log(typeof 19); //number
-console.log(typeof true); //boolean
-console.log(typeof 1.6); //number
-console.log(typeof isHorseInside); //boolean
+//Variables
+let horses;
+let messageForVisitors = console.log("Welcome to Zinna's stables.");
+const LATE_PAYMENT_FEE = 100; // cost of late payment fee
+let availableStalls =6;//number of available stalls
+let relocation // move outside horse inside and inside horse outside
 
-const STABLE_MONTHLY_FEE = 143; // constent, fixed number
-console.log("Stable monthly fee is " + STABLE_MONTHLY_FEE);
+//------------------------- First day -------------------------//
 
-console.log("Stable monthly fee multiply by 3 is "+ STABLE_MONTHLY_FEE * 3);
-console.log(30 + 4); // addition, 34
-console.log(40 - 10); // subtraction, 30
-console.log(40/5); // division, 8
+// Using a constructor, add at least 3 horses to your stables.
+//
+// The horse should have the following properties:
+// - name, nickname, favorite treat (string)
+// - age, monthly rent (number)
+// - location (boolean inside/outside)
+// - two unique properties of your choice (use any primitive)
+// - a method that introduces your horse and references at least 3 object properties.
+// - a second, unique method of your choice
 
-console.log(2+" hi");//works with '+'
-console.log(2 - "hi"); // no '-', result NaN
-console.log(2 - "2"); //type coercion, this still works, result 0
-console.log(2 + "2"); //result 22
-console.log(true + 2); //true is 1, 3
-console.log(false +2);//false is 0, 2
+// Store the horses you've just created in your "horses" variable.
 
-console.log(`My horse ${horseName}`);
+// Fancy! Another horse wants to be stabled! Create a variable that stores an object
+// literal of your new horse, and add it to your "horses" variable.
 
-//'''''`````````
-
-// Lesson 4 LAB 
-console.log("\n-----Lesson 4 lab-----");
-let horseNickname = "Gossip";
-console.log(`My horse name is ${horseName}. I call them with ${horseNickname} as a nickname.`);
-console.log("$"+((STABLE_MONTHLY_FEE*3)*.1)+" will be saved(10%) for 3 month stay at my stables."); 
-
-//Lesson 5 Lesson 
-console.log("\n-----Lesson 5-----");
-let goat = false;
-if(!goat){ // NOT false 
-    console.log(horseName); // slush
-} else {
-    console.log(horseNickname); // gossip
+// Initialize new property to your horses: a boolean that allows you to check if your horse
+// is hungry or not. Use dot notation.
+function CreateHorse(name, nickname,  favTreat, rent, age, isInside,  unique1, unique2){ //with constructors
+    this.name = name; 
+    this.nickname = nickname;
+    this.favTreat = favTreat;
+    this.age = age; 
+    this.rent = rent; 
+    this.isInside = isInside; 
+    this.personality = unique1;
+    this.colour = unique2;
+    this.intro = function intro(){
+        console.log(
+            `My horse is called ${name} and they are ${age} years old! And her favourite treat is ${favTreat}.`
+        );
+    };
 }
 
-let grade = 4.6; // grading if statement
-if (grade>4.5 || grade<0.5){ // less or equal to 1.5
-    console.log("re-enter the grade");
-} else if (grade <= 2.5){ 
-    console.log("below average");
-} else if (grade <= 3.5) { 
-    console.log("average");
-} else if (grade <= 1.5) { // greater than 4.5 OR less than 0.5
-    console.log("fail");
+const gossip = new CreateHorse("Gossip", "Goose", "celeries", 120, 4, false, "lovely", "pink")
+const boba = new CreateHorse("Boba", "Tapioca", "carrots", 300, 6, false, "shy", "red");
+const latte = new CreateHorse("Latte", "Milk", "strawberries", 160, 2, false, "energetic", "blue");
+
+horses = [gossip, boba, latte];
+    
+
+ const smoothie = {
+    name:"Smoothie",
+    nickname: "Slush",
+    favTreat: "melon",
+    hunger: true,
+    rent: 180, //monthly
+    age: 9,
+    isInside: false, 
+    personality: "selfish",
+    colour: "green",
+    intro: function(){
+        console.log(
+            `My horse's name is ${this.name}, I also call her ${this.nickname}. 
+            And her favourite treat is ${this.favTreat}. `)}
+ };
+
+horses.push(smoothie);
+
+for(let i = 0; i<horses.length; i++){
+    horses[i].isHungry=true; //all horses are starving
+}
+
+//------------------------- Stable roster -------------------------//
+
+// We want to keep track of our horses and how they are doing. Paste the data structure
+// of our horse variable below so we can reference it. It is okay to comment it out.
+
+console.log(horses);
+// [
+//     CreateHorse {
+//       name: 'Gossip',
+//       nickname: 'Goose',
+//       favTreat: 'celeries',
+//       age: 4,
+//       rent: 120,
+//       isInside: false,
+//       personality: 'lovely',
+//       colour: 'pink',
+//       intro: [Function: intro]
+//     },
+//     CreateHorse {
+//       name: 'Boba',
+//       nickname: 'Tapioca',
+//       favTreat: 'carrots',
+//       age: 6,
+//       rent: 300,
+//       isInside: false,
+//       personality: 'shy',
+//       colour: 'red',
+//       intro: [Function: intro]
+//     },
+//     CreateHorse {
+//       name: 'Latte',
+//       nickname: 'Milk',
+//       favTreat: 'strawberries',
+//       age: 2,
+//       rent: 160,
+//       isInside: false,
+//       personality: 'energetic',
+//       colour: 'blue',
+//       intro: [Function: intro]
+//     },
+//     {
+//       name: 'Smoothie',
+//       nickname: 'Slush',
+//       favTreat: 'melon',
+//       hunger: true,
+//       rent: 180,
+//       age: 9,
+//       isInside: false,
+//       personality: 'selfish',
+//       colour: 'green',
+//       intro: [Function: intro]
+//     },
+//     isHungry: false
+//   ]
+
+//---------------------- Growing business ----------------------//
+
+// We've added some horses! Re-assign the variable that contains the number of available stalls.
+// Use the math operator to determine how many stables you should have left, given the number of
+// horses you've added.
+availableStalls = availableStalls - horses.length; 
+
+// Express the following in code: If the variable that contains your remaining stalls
+// is less than 2, log out "We need to build more stalls", otherwise log out "We have
+// [number of stalls] available!"
+if(availableStalls <= 2){
+    console.log("We need to build more stalls");
 } else{
-    console.log("above average"); // greater than 
+    console.log("We have "+ availableStalls + " stalls available!");
 }
 
-let num = 1;
-if (num === 1){
-    console.log("hello2");
-}
-if (num !== 2){
-    console.log("bye");
-}
+// Create a function that logs out how much will an individual horse will owe if rent is
+// paid late. Invoke the function.
+function lateFee(horse){
+    let totalFee = horse["rent"] + LATE_PAYMENT_FEE;
 
-//Lesson 5 LAB
-
-console.log("\n-----Lesson 5 lab-----");
-
-//generate integer number 0 or 1 
-let randomNum = Math.floor(Math.random()*(2-0)+0); 
-// for integer random number: Math.floor(Math.random()*(max-min)+min)
-
-let myHorseLocate = randomNum; //0 is false, 1 is true
-//console.log(randomNum);
-
-if (myHorseLocate <= 0){//print if my horse is inside or outside
-    console.log(horseName+" is outside");
-} else { //if its 1
-    console.log(horseName + " is inside");
-}
-
-//Lesson 6 Indexes and Arrays
-console.log("-----Lesson 6-----")
-let word = "Carrot" 
-console.log(word.charAt(0)); //character at 0 
-
-//let methods = ["method1", "method2", "method3"];
-//console.log(methods.charAt(2)); // method3
-
-let listOfHorses = [horseName, "Boba", "Latte", "Earl Gray"];
-console.log(listOfHorses[2]);
-let horseAges = [horseAge, 2, 10, 12];
-
-console.log(listOfHorses.length); 
-
-console.log(`Hello, welcome, we have ${listOfHorses.length} horses`);
-
-
-//Lesson 6 LAB
-console.log("------Lesson 6 LAB------")
-
-let horseLocateArray = [" inside", " outside", " running outside", " chilling inside", ".. sorry I don't know what they are doing"]
-
-console.log(`Hello! I have ${listOfHorses.length} horses! Let me introduce my horses names! ${listOfHorses}`);
-listOfHorses.push("Milk Foam");
-console.log(`Oh! no wait I also have ${listOfHorses[4]}, I actually have ${listOfHorses.length} horses`);
-console.log(`${listOfHorses[0]} is${horseLocateArray[0]}` );
-console.log(`${listOfHorses[1]} is${horseLocateArray[1]}` );
-console.log(`${listOfHorses[2]} is${horseLocateArray[2]}` );
-console.log(`${listOfHorses[3]} is${horseLocateArray[3]}` );
-console.log(`${listOfHorses[4]} is${horseLocateArray[4]}` );
-
-
-//Lesson 7 Lesson
-console.log("------ Lesson 7 ------")
-
-horseAges.push(11,15,17);
-
-function logHorseAge(horse, age){
-    console.log(listOfHorses[horse] + " is " + horseAges[age]+ "!");
-}
-logHorseAge(4 , 6); 
-
-const rent = 2700;
-let amount; //global scope
-function payMe(rent, discount){
-    if(discount){
-         amount = rent - discount;
+    console.log(horse["name"]+"'s rent is $"+ horse["rent"] +", late fee is $" + LATE_PAYMENT_FEE +
+        " so " + horse["name"] +"'s total fee is $" + totalFee);
+    
+// Add loop that checks to find out if a certain horse likes a treat. If the horse does not like
+// the treat, log out their disatisfaction and check the next horse. Exit the loop when you find
+// the horse that likes the treat.
+    let treat = "melon";
+    for(let i = 0; i<horses.length; i++){
+        if(horses[i]["favTreat"]!==treat){
+            console.log(horses[i]["name"]+" does not like "+ treat);
+        }
+    
     }
-    else{
-         amount = rent;
-    }
-    return amount;
 }
-console.log(`Your total rent is $${payMe(rent, 15)} after discount.`);
 
-//another real life example:
+// Create and invoke a function that returns (not logs) the nickname of a chosen horse. Log out
+// the return value outside of the function.
+function getNickname (horse){
+    return horse["nickname"];
+}
+console.log(horses[0]["name"]+"'s nickname is "+getNickname(horses[0]));
 
-function bankingData(userIsLoggedIn){
-    if(!userIsLoggedIn){
-        // all the banking data would go here
+
+//------------------------- Day to day operations -------------------------//
+
+// Create and invoke a function references one of your unique horse properties. It should
+// contain a conditional or a loop.
+function uniques(){
+    for(let i=0; i < horses.length; i++){
+        if(i%2 === 1){ //odd index number horses will log out their colour unique
+            console.log(horses[i]["name"]+ " is "+ horses[i]["colour"]);
+        }
+        else{ //even index number horses will log out their personality unique
+            console.log(horses[i]["name"]+ " is "+ horses[i]["personality"]);
+        }
     }
-    else{
-        // let them to log in
+}
+ uniques();
+
+
+// Morning! Create and invoke a function that moves all your horses outside. It should
+// log out statement indicating the horses have been moved to spend time in the sun.
+
+function dayToDay(){
+    //move them outside
+    for(let i=0; i < horses.length; i++){
+        if(horses[i]["isInside"]){
+            horses[i]["isinside"] = false;
+        }
+        console.log(horses[i]["name"]+" is moved to spend time in the sun");
+    }
+
+    //move them inside
+    for(let i=0; i < horses.length; i++){
+        if(!horses[i]["isInside"]){
+            horses[i]["isinside"] = true;
+        }
+        console.log("Bedtime!, " + horses[i]["name"]+" is moved inside");
+    
+    }
+}
+
+dayToDay();
+
+// Initialize a method on your horses that moves them inside if they are outside, and
+    // vice versa. 
+
+relocation = function(horse){ //horse is integer of horses array index number
+    if(horses[horse]["isInside"]){
+        horses[horse]["isInside"] = false; 
+    }else{
+        horses[horse]["isInside"] = true; 
+    }
+}
+
+function treats(){
+    // Food! Create and invoke a function that feeds your horses. If the horse is outside, it
+    // should call them in, and then all horses should be fed a treat. Log the activity of
+    // the horses.
+
+    for(let i=0; i < horses.length; i++){
+        if(horses[i]["isHungry"]){
+            horses[i]["isHungry"] = false;
+            console.log(horses[i]["name"]+" is fed");
+        }else{
+            console.log(horses[i]["name"]+" is fed");
+        }
+
+        if(!horses[i]["isInside"]){
+            horses[i]["isinside"] = true;
+        }
+        console.log(horses[i]["name"]+"'s fav treat is " + horses[i]["favTreat"]);
     }
     
 }
+treats();
+// Bedtime! Update the function that lets your horses outside so that it also calls them
+// in if it is getting dark. Only the horses that moved should log out a message. Invoke the function.
+dayToDay();
+
+//------------------------- Bonus -------------------------//
+
+// Replace the ascii art at the top of the file with art representing your stable. 
